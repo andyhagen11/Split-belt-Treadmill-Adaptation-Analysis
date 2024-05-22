@@ -540,7 +540,7 @@ end
     TimepointData.StepTimeContrib = TimepointDataGrab(StepTimeContrib,Phase,Timepoints,'Step');
     TimepointData.StepVelocityContrib = TimepointDataGrab(StepVelocityContrib,Phase,Timepoints,'Step');
 
-    SLA Table 
+    % SLA Table 
     SLA_Contrib_Results= table(StepNum', StepLengthAsymNorm', StepLengthAsymRaw',StepPositionContrib', StepTimeContrib', StepVelocityContrib');
     SLA_Contrib_Results.Properties.VariableNames = {'StepNum', 'StepLengthAsymNorm','StepLengthAsymRaw', 'StepPositionContrib', 'StepTimeContrib', 'StepVelocityContrib'};
 
