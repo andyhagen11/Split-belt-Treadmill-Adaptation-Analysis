@@ -618,9 +618,9 @@ end
     % The number of steps taken to complete 50% of the change: (ln(2)/abs(b_s))
     % The asymmetry at the end of the training phase: (c)
 
-     [DblSup_Fitted, DblSup_Resids, DblSup_FitParams, DblSup_LinearCIs, DblSup_Aic] = fitSingleExpPSO(DblSupAsym(21:end));  %Cropped first 10 gait cycles (20 steps to allow treadmill to speed up) don't want these steps in our model
-     [Prop_Fitted, Prop_Resids, Prop_FitParams, Prop_LinearCIs, Prop_Aic] = fitSingleExpPSO(PeakPropulsionAsym(21:end));  %Cropped first 10 gait cycles (20 steps to allow treadmill to speed up) don't want these steps in our model
-     [SLA_Fitted, SLA_Resids, SLA_FitParams, SLA_LinearCIs, SLA_Aic] = fitSingleExpPSO(StepLengthAsymNorm(21:end));  %Cropped first 10 gait cycles (20 steps to allow treadmill to speed up) don't want these steps in our model
+     [DblSup_Fitted, DblSup_Resids, DblSup_FitParams, DblSup_LinearCIs, DblSup_Aic] = fitSingleExpPSO(DblSupAsym(7:end)); %Cropped first 6 steps to allow treadmill to speed up
+     [Prop_Fitted, Prop_Resids, Prop_FitParams, Prop_LinearCIs, Prop_Aic] = fitSingleExpPSO(PeakPropulsionAsym(7:end));  %Cropped first 6 steps to allow treadmill to speed up
+     [SLA_Fitted, SLA_Resids, SLA_FitParams, SLA_LinearCIs, SLA_Aic] = fitSingleExpPSO(StepLengthAsymNorm(7:end));  %Cropped first 6 steps to allow treadmill to speed up
 
      if strcmp(Phase,'Adaptation') || strcmp(Phase,'Deadaptation')
         % Calculate Magnitude of Adaptation 
